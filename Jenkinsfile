@@ -4,7 +4,7 @@ pipeline{
 		  PATH = "$PATH:/opt/apache-maven-3.9.4/bin"
 		  }
          stages{
-		       stage ('Get Code){
+		       stage ('Get Code'){
 			         steps{
 					    git branch:'master',
 						url:'https://github.com/shaileshthelord/MavenGitProject.git'
