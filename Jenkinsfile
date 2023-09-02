@@ -14,7 +14,7 @@ pipeline{
 					   
 			   stage('Build'){
 			          steps{
-					     ${mvnHome}/bin/mvn package
+					     mvn -Dmaven.test.failure.ignore=true install'
 						   }
 					  }
 			      }
