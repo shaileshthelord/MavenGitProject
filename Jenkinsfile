@@ -1,7 +1,7 @@
 pipeline{
       agent any
 	      environment {
-		  PATH = "$PATH:/opt/apache-maven-3.9.4/bin"
+		  PATH = "/usr/share/maven-3.0.5/bin"
 		  }
          stages{
 		       stage ('Get Code'){
@@ -14,7 +14,7 @@ pipeline{
 					   
 			   stage('Build'){
 			          steps{
-					     mvn -Dmaven.test.failure.ignore=true install'
+					     sh 'mvn clean package'
 						   }
 					  }
 			      }
